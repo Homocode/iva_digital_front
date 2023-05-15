@@ -1,0 +1,8 @@
+#cliente-info {
+  display: flex;
+  flex-direction: column;
+}
+
+#cliente-info > p {
+  margin: 0;
+}

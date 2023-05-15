@@ -1,0 +1,13 @@
+#tools {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.mat-toolbar {
+  justify-content: space-between;
+}
+
+.mat-toolbar > h1 {
+  margin: 0;
+}

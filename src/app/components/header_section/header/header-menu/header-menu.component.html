@@ -1,0 +1,11 @@
+<button mat-button [matMenuTriggerFor]="menu">
+  <mat-icon>menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <ng-container *ngIf="!selectedCliente$.getValue().isSelected">
+    <button mat-menu-item (click)="addCliente()">Agregar cliente</button>
+  </ng-container>
+  <ng-container *ngIf="selectedCliente$.getValue().isSelected">
+    <button mat-menu-item (click)="exitCliente()">Salir</button>
+  </ng-container>
+</mat-menu>

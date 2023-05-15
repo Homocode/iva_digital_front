@@ -1,0 +1,23 @@
+<p>select-cliente-form works!</p>
+<form [formGroup]="selectClienteForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="form-full-width" appearance="fill">
+    <mat-label>Cliente</mat-label>
+    <input
+      type="text"
+      placeholder="Pick one"
+      aria-label="Number"
+      matInput
+      [formControl]="inputControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option
+        *ngFor="let cliente of filteredOptions$ | async"
+        [value]="cliente.razonSocial"
+      >
+        {{ cliente.razonSocial }}
+        ({{ cliente.cuit }})
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

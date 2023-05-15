@@ -1,0 +1,14 @@
+<mat-dialog-content>
+  <form enctype="multipart/form-data">
+    <input
+      type="file"
+      class="file-input"
+      [accept]="requiredFileType"
+      (change)="selectFile($event)"
+      max="1"
+    />
+    <ng-container *ngIf="currentFile">
+      <button mat-button color="primary" (click)="upload()">Importar</button>
+    </ng-container>
+  </form>
+</mat-dialog-content>

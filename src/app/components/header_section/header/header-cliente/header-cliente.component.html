@@ -1,0 +1,11 @@
+<ng-container *ngIf="selectedCliente$.getValue().isSelected === false">
+  <button mat-button (click)="openDialog()">
+    <mat-icon>account_circle</mat-icon>Cliente
+  </button>
+</ng-container>
+<ng-container *ngIf="selectedCliente$.getValue().isSelected === true">
+  <span id="cliente-info">
+    <p>{{ selectedCliente$.getValue().selectedCliente?.razonSocial }}</p>
+    <p>Cuit: {{ selectedCliente$.getValue().selectedCliente?.cuit }}</p>
+  </span>
+</ng-container>

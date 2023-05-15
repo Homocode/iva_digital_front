@@ -1,0 +1,103 @@
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Filtro" #input />
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="fechaEmision">
+      <th mat-header-cell *matHeaderCellDef>Fecha Emisión</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.fechaEmision }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="mesImputacion">
+      <th mat-header-cell *matHeaderCellDef>Mes Imputación</th>
+      <td mat-cell *matCellDef="let element">{{ element.mesImputacion }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="tipoComprobante">
+      <th mat-header-cell *matHeaderCellDef>Tipo Compro.</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.tipoComprobante }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="numeroComprobante">
+      <th mat-header-cell *matHeaderCellDef>Num. Compro.</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.numeroComprobante }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombreProveedor">
+      <th mat-header-cell *matHeaderCellDef>Proveedor</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.nombreProveedor }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cuitProvedor">
+      <th mat-header-cell *matHeaderCellDef>Cuit Proveedor</th>
+      <td mat-cell *matCellDef="let element">{{ element.cuitProvedor }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="total">
+      <th mat-header-cell *matHeaderCellDef>Total</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.total }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="toalNetosGravados">
+      <th mat-header-cell *matHeaderCellDef>Total Netos Gravados</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.toalNetosGravados }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="totalIva">
+      <th mat-header-cell *matHeaderCellDef>Total IVA</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.totalIva }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="ConceptosExentosNoGravados">
+      <th mat-header-cell *matHeaderCellDef>Concep. Exen. y No Grav.</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.ConceptosExentosNoGravados }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="percepcionesIva">
+      <th mat-header-cell *matHeaderCellDef>Percepciones IVA</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.percepcionesIva }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="percepcionesIibb">
+      <th mat-header-cell *matHeaderCellDef>Percepciones IIBB</th>
+      <td mat-cell *matCellDef="let element">
+        {{ element.percepcionesIibb }}
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+    <!-- Row shown when there is no matching data. -->
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">
+        No data matching the filter "{{ input.value }}"
+      </td>
+    </tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    aria-label="Select page of users"
+  ></mat-paginator>
+</div>
