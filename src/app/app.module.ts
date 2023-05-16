@@ -29,7 +29,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { ImportComprobantesComponent } from './components/body_section/libro-compras/import-comprobantes/import-comprobantes.component';
+import { ImportComprobantesDialogComponent } from './components/body_section/libro-compras/import-comprobantes-dialog/import-comprobantes-dialog.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ComprobantesComprasTableComponent } from './components/body_section/libro-compras/comprobantes-compras-table/comprobantes-compras-table.component';
 
@@ -48,7 +48,7 @@ import { ComprobantesComprasTableComponent } from './components/body_section/lib
     LibroVentasComponent,
     LiquidacionIvaDialogComponent,
     NotFoundComponent,
-    ImportComprobantesComponent,
+    ImportComprobantesDialogComponent,
     ComprobantesComprasTableComponent,
   ],
   imports: [

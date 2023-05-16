@@ -4,11 +4,11 @@ import { HttpEventType, HttpResponse } from '@angular/common/http';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-import-comprobantes',
-  templateUrl: './import-comprobantes.component.html',
-  styleUrls: ['./import-comprobantes.component.css'],
+  selector: 'app-import-comprobantes-dialog',
+  templateUrl: './import-comprobantes-dialog.component.html',
+  styleUrls: ['./import-comprobantes-dialog.component.css'],
 })
-export class ImportComprobantesComponent {
+export class ImportComprobantesDialogComponent {
   currentFile?: File;
   progress = 0;
   message = '';
@@ -18,7 +18,7 @@ export class ImportComprobantesComponent {
 
   constructor(
     private fileService: FilesService,
-    public dialogRef: MatDialogRef<ImportComprobantesComponent>
+    public dialogRef: MatDialogRef<ImportComprobantesDialogComponent>
   ) {}
 
   selectFile(event: any) {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ImportComprobantesComponent } from './import-comprobantes/import-comprobantes.component';
+import { ImportComprobantesDialogComponent } from './import-comprobantes-dialog/import-comprobantes-dialog.component';
 
 @Component({
   selector: 'app-libro-compras',
@@ -11,7 +11,7 @@ export class LibroComprasComponent {
   constructor(public dialog: MatDialog) {}
 
   importCsv() {
-    this.dialog.open(ImportComprobantesComponent);
+    this.dialog.open(ImportComprobantesDialogComponent);
   }
 
   openDialogCompFis() {}
