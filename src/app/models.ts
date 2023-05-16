@@ -22,3 +22,13 @@ export interface IComprobanteCompra {
   percepcionesIva: number;
   percepcionesIibb: number;
 }
+
+export interface IProveedores {
+  cuit: string;
+  denominacion: string;
+}
+
+export interface ITipoComprobante {
+  codigo: string;
+  descripcion: string;
+}

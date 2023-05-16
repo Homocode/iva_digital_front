@@ -1,0 +1,21 @@
+<div mat-dialog-title>
+  <h2>Cargar comprobante compra</h2>
+</div>
+<div mat-dialog-content></div>
+<div id="comprobante-info">
+  <div class="row">
+    <mat-form-field>
+      <mat-label>Grupo comprobante</mat-label>
+      <mat-select name="grupoDeComprobante">
+        <mat-option *ngFor="let grupo of grupoDeComprobantes" [value]="grupo">
+          {{ grupo }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+<div id="comprobante-values"></div>
+<div mat-dialog-actions>
+  <button mat-raised-button>Cancelar</button>
+  <button mat-raised-button color="primary">Guardar</button>
+</div>

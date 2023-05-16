@@ -32,6 +32,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { ImportComprobantesDialogComponent } from './components/body_section/libro-compras/import-comprobantes-dialog/import-comprobantes-dialog.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ComprobantesComprasTableComponent } from './components/body_section/libro-compras/comprobantes-compras-table/comprobantes-compras-table.component';
+import { AddComprobanteDialogComponent } from './components/body_section/libro-compras/add-comprobante-dialog/add-comprobante-dialog.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,7 @@ import { ComprobantesComprasTableComponent } from './components/body_section/lib
     NotFoundComponent,
     ImportComprobantesDialogComponent,
     ComprobantesComprasTableComponent,
+    AddComprobanteDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -69,6 +72,7 @@ import { ComprobantesComprasTableComponent } from './components/body_section/lib
     MatPaginatorModule,
     MatSortModule,
     MatProgressBarModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

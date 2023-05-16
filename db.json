@@ -168,5 +168,28 @@
       "percepcionesIva": 566,
       "percepcionesIibb": 32324
     }
+  ],
+
+  "proveedores": [
+    {
+      "cuit": "20-43434534-6",
+      "denominacion": "La Choza"
+    },
+    {
+      "cuit": "24-43435434-6",
+      "denominacion": "Owe"
+    },
+    {
+      "cuit": "22-86943434-6",
+      "denominacion": "Open 25"
+    },
+    {
+      "cuit": "30-68924529-6",
+      "denominacion": "El triangulo"
+    },
+    {
+      "cuit": "35-85618389-6",
+      "denominacion": "La Roti"
+    }
   ]
 }

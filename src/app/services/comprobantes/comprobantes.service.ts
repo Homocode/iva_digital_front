@@ -8,6 +8,7 @@ import { ClientesService } from '../clientes/clientes.service';
   providedIn: 'root',
 })
 export class ComprobantesService {
+  private baseUrl = 'http://localhost:3000';
   private selectedCliente$: BehaviorSubject<IClienteState>;
 
   constructor(private http: HttpClient, clientesService: ClientesService) {
@@ -22,7 +23,7 @@ export class ComprobantesService {
     queryParams.append('cuit', cuitCliente);
 
     return this.http.get<IComprobanteCompra[]>(
-      ' http://localhost:3000/comprobantesCompras',
+      `${this.baseUrl}/comprobantesCompras`,
       {
         params: queryParams,
       }
